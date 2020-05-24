@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-       <meta charset="UTF-8">
-       <title>Rich Presence Manager</title>
+        <meta charset="UTF-8">
+        <title>Rich Presence Manager</title>
+        <link rel="stylesheet" href="./whitney/style.css">
+        <style>
+            * {
+                color: white;
+                font-family: "Whitney Light Regular", sans-serif;
+                font-weight: normal;
+                font-size: 18px;
+            }
+            body {
+                overflow-x: hidden;
+            }
+            input {
+                border: none;
+                outline: none;
+                background: none;
+                color: #FFFFFF;
+                width: 180px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            #name {
+                font-family: "Whitney Semibold Regular", sans-serif;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            input:focus {
+                border: solid #FFFFFF 1px;
+            }
+            input:not(:focus) {
+                padding: 0;
+            }
+            .flex {
+                display: flex;
+            }
+            #large-image {
+                border-radius: 4px;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            h5 {
+                text-align: center;
+                margin-bottom: 20px;
+                margin-top: 0;
+                font-family: sans-serif;
+                font-weight: normal;
+                font-size: initial;
+            }
+            .grow {
+                flex-grow: 1;
+            }
+            #state {
+                width: 90px;
+            }
+            a {
+                text-decoration: none;
+            }
+            input::placeholder {
+                color: #DDDDDD;
+            }
+        </style>
     </head>
     <body>
-        <h1>test</h1>
+        <h5>Rich Presence Manager</h5>
+        <div class="flex">
+            <img width="90" height="90" id="large-image" src="https://cdn.discordapp.com/embed/avatars/3.png" alt="">
+            <div class="grow">
+                <span id="name">Name</span><br>
+                <input type="text" id="details" placeholder="Details">
+                <br>
+                <input type="text" id="state" placeholder="State">
+                &nbsp;
+                <a href="#" id="party-click">
+                    (
+                    <span id="party-size">1</span>
+                    &nbsp;of&nbsp;
+                    <span id="party-max">5</span>
+                    )
+                </a>
+                <br>
+                <a href="#" id="timestamp-click">
+                    00:00 left
+                </a>
+                <input type="hidden" id="start-timestamp">
+                <input type="hidden" id="end-timestamp">
+                <input type="hidden" id="id">
+            </div>
+        </div>
     </body>
 </html>

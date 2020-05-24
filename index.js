@@ -1,4 +1,5 @@
 const electron = require("electron");
+const rpc = require("discord-rpc");
 
 let isQuitting = false;
 
